@@ -1,0 +1,10 @@
+redes de hosts --> /etc/hosts
+	[ip] nombre
+
+Apuntes Docker
+- Hacer docker interactivo --> docker run --name web -ti --hostname web ubuntu:latest 
+- Hacer docker con volumen --> docker run --name [name] --hostname [name] -ti -p [xxxx:xx] ubuntu:latest -v /home/alumno/web:/var/www/html --name web3 --hostname web3 web:v2
+
+- Instalar apache en el docker --> apt install apache2 php libapache2-mod-php
+- Hacer commit de la imagen
+  - docker commit -m "mensaje" [nombre_contenedor] [nombre:version]
