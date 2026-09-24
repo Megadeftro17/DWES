@@ -8,3 +8,24 @@ Apuntes Docker
 - Instalar apache en el docker --> apt install apache2 php libapache2-mod-php
 - Hacer commit de la imagen
   - docker commit -m "mensaje" [nombre_contenedor] [nombre:version]
+
+#Borrar todos los contenedores
+- docker rm -f $(docker ps -a -q)
+
+#Instalar mediante el dockerfile
+- docker run -ti --name [nombre] --hostname [nombre] -p [puerto] -v [volumen] [imagen]
+- docker run -ti --name web10 --hostname web -p 8100:80 -v /home/alumno/2DAW/DWES/:/var/www/html web:v1
+
+#docker-compose.yaml
+- services:
+  # nombre del contenedor
+  web:
+    # donde construirlo
+    build: ./web
+    # puertos
+    ports:
+      - "8100:80"
+    # almacenamiento
+    volumes:
+      - 
+    # image: php:8.5-apache
