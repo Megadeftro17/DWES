@@ -16,16 +16,14 @@ Apuntes Docker
 - docker run -ti --name [nombre] --hostname [nombre] -p [puerto] -v [volumen] [imagen]
 - docker run -ti --name web10 --hostname web -p 8100:80 -v /home/alumno/2DAW/DWES/:/var/www/html web:v1
 
-#docker-compose.yaml
-- services:
-  # nombre del contenedor
-  web:
-    # donde construirlo
-    build: ./web
-    # puertos
-    ports:
-      - "8100:80"
-    # almacenamiento
-    volumes:
-      - 
-    # image: php:8.5-apache
+# Configuracion para aplicarla en todos los directorios (dice que las configuraciones hagan que si no encuentra el archivo
+# muestre igualmente el directorio si existe)
+RUN echo "<Directory /var/www/html>" >> /etc/apache2/sites-available/000-default.conf
+RUN echo "Options Indexes" >> /etc/apache2/sites-available/000-default.conf
+RUN echo "</Directory>" >> /etc/apache2/sites-available/000-default.conf
+
+###################################################################################################################################################################################
+Docker compose
+- Para levantar un docker y que recargue 100% la imagen --> docker compose up -d --build 
+
+# Si quiero acceder a lo que me ofrece el servicio tengo que exponer puertos

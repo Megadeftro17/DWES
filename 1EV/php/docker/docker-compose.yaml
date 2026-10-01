@@ -1,2 +1,42 @@
 services:
-  $END$
+  # Service web
+  web:
+    hostname: web               # hostname
+    container_name: web         # --name
+    build: ./web
+    tty: true                   # -t
+    stdin_open: true            # -i
+    ports:                      # -p
+      - "80:80"
+    volumes:                    # -v
+      - ./../app:/var/www/html  # carpeta php/app --> /var/www/html
+
+  # Service de MYSQL
+  database:
+    image: mysql
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=instituto
+      - MYSQL_USER=alumno
+      - MYSQL_PASSWORD=alumno
+      - MYSQL_ROOT_PASSWORD=root12345
+    ports:
+      - "33306:3306"
+
+  # Service de phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin
+    hostname: phpmyadmin
+    container_name: phpmyadmin
+    ports:
+      - "8100:80"
+    depends_on:
+      - database
+    environment:
+      - PMA_HOST=mysql
+      - PMA_ARBITRARY=1
+
+# Volume creado propio
+volumes:
+  data:
