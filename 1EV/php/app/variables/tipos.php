@@ -27,19 +27,21 @@
         <?php
         $var = 5;
         $tipo = gettype($var);
-        echo "<h3>La variable <span style='color: green'>$var</span> es de tipo <span style='color: green;'>$tipo</span></h3>";
-        $var2 = 5.5;
-        $tipo2 = gettype($var2);
-        echo "<h3>La variable <span style='color: green'>$var2</span> es de tipo <span style='color: green;'>$tipo2</span></h3>";
-        $var3 = "CADENA";
-        $tipo3 = gettype($var3);
-        echo "<h3>La variable <span style='color: green'>$var3</span> es de tipo <span style='color: green;'>$tipo3</span></h3>";
-        $var4 = false;
-        $tipo4 = gettype($var4);
-        echo "<h3>La variable <span style='color: green'>false</span> es de tipo <span style='color: green;'>$tipo4</span></h3>";
-        $var5 = null;
-        $tipo5 = gettype($var5);
-        echo "<h3>La variable <span style='color: green'>null</span> es de tipo <span style='color: green;'>$tipo5</span></h3>";
+        echo "<h3>la variable <span style='color:green'>$var</span> es de tipo  <span style='color:green'>$tipo</span></h3>";
+        $var = 5.7;
+        $tipo = gettype($var);
+        echo "<h3>la variable <span style='color:green'>$var</span> es de tipo  <span style='color: green'>$tipo</span></h3>";
+        $var = "hola caracola";
+        $tipo = gettype($var);
+        echo "<h3>la variable <span style='color:green'>$var</span> es de tipo  <span style='color:green'>$tipo</span></h3>";
+        $var = true;
+        $var = var_export($var, true);
+        $tipo = gettype($var);
+        echo "<h3>la variable <span style='color:green'>$var</span> es de tipo  <span style='color:green'>$tipo</span></h3>";
+        $var = null;
+        $tipo = gettype($var);
+        echo "<h3>la variable <span style='color:green'>$var</span> es de tipo  <span style='color:green'>$tipo</span></h3>";
+
 
         ?>
     </div>
