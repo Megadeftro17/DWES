@@ -53,12 +53,4 @@ switch (true) {
 }
 echo "<h1>EDAD: $edad</h1>";
 echo "<h1>ETAPA: $etapa</h1>";
-
-/**
- * EJERCICIO SWITCH MESES
- * Mostrando numero de días
- * 1,3,5,7,8,10,12
- * 2 (28-29)
- * 4,6,9,11
- */
 ?>
