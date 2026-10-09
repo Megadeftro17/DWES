@@ -38,4 +38,4 @@ echo "<h4>DATOS STRING</h4>====================================";
 var_dump($meses);
 var_dump($numMesRandom);
 echo "===================================";
-echo "<h1>Mes: ".($numMesRandom+1)." - ".$resultado."</h1>";
+echo "<h1>El mes: ".($numMesRandom+1).", ".$resultado."</h1>";

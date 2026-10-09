@@ -1,0 +1,30 @@
+<!-- Calculadora con sumas y restas -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+<form action="calcular.php" method="post">
+    <fieldset style="margin: 20px;background-color: antiquewhite;width: 60%;border: solid 2px black">
+        <legend>Calculadora</legend>
+        <!-- Valor 1 -->
+        <input type="text" name="op1" style="width: 100px" id="">
+        <!-- Operacion -->
+        <select name="operador" style="width: 80px" id="">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <!-- Valor 2 -->
+        <input type="text" name="op2" style="width: 100px" id="">
+        <br>
+        <!-- Boton -->
+        <input type="submit" value="Enviar" name="submit">
+        <br>
+    </fieldset>
+</form>
+</body>
+</html>
