@@ -45,7 +45,7 @@
         "https://es.wikieducator.org/images/e/e5/M3_web.png",
         "https://es.wikieducator.org/images/a/a6/Ficheros.jpeg"
     ];
-    
+
     // 3 Imagenes aleatorias
     $clavesAleatorias = array_rand($imagenes, 3);
 
