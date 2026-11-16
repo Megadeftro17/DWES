@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     Cadena <input type="text" name="cadena" value="<?= $cadena??"" ?>" id="">
 
     <br>
-    <input type="text" value="Evaluar" name="submit" id="">
+    <button type="text" value="Evaluar" name="submit" id="">
 </form>
 <?= $msj??"" ?>
 </body>
