@@ -1,9 +1,11 @@
 <?php
-$mensaje = "" ?? "";
+$mensaje = "";
 $errores = [];
 
 $nombre = "";
-$anio = "";
+$anio = 0 ?? "";
+$edad =  0 ?? "";
+$anioInt = 0??"";
 
 if(isset($_POST['submit'])){
     $nombre = trim(htmlspecialchars($_POST['nombre']));
@@ -32,6 +34,10 @@ if(isset($_POST['submit'])){
 
     if(empty($errores)){
         $mensaje = "Hola $nombre, en $anioActual tienes $edad años";
+    } else {
+        foreach ($errores as $error){
+            $mensaje .= $error."<br>";
+        }
     }
 
 }
@@ -56,6 +62,7 @@ if(isset($_POST['submit'])){
 
     <button type="submit" name="submit">Enviar datos</button>
 </form>
+<hr>
 <?= $mensaje?>
 </body>
 </html>
